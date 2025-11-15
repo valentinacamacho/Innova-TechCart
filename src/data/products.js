@@ -1,3 +1,15 @@
+import p01 from "../assets/images/p-01.jpg"; 
+import p02 from "../assets/images/p-02.jpg";
+import p03 from "../assets/images/p-03.jpg";
+import p04 from "../assets/images/p-04.jpg";
+import p05 from "../assets/images/p-05.jpg";
+import p06 from "../assets/images/p-06.jpg";
+import p07 from "../assets/images/p-07.jpg";
+import p08 from "../assets/images/p-08.jpg";
+import p09 from "../assets/images/p-09.jpg";
+import p10 from "../assets/images/p-10.jpg";
+import p11 from "../assets/images/p-11.jpg";
+
 export const products = [
   {
     id: "p01",
@@ -8,7 +20,7 @@ export const products = [
     price: 1549700,
     stock: 2,
     category: "Portatiles",
-    urlImage: "",
+    urlImage: p01,
   },
 
   {
@@ -20,7 +32,7 @@ export const products = [
     price: 2079888,
     stock: 13,
     category: "Portatiles",
-    urlImage: "",
+    urlImage: p02,
   },
 
   {
@@ -32,7 +44,7 @@ export const products = [
     price: 2849900,
     stock: 13,
     category: "Portatiles",
-    urlImage: "",
+    urlImage: p03,
   },
 
   {
@@ -42,9 +54,9 @@ export const products = [
     description:
       "Teclado inalámbrico con retroiluminación ajustable y diseño silencioso.",
     price: 640900,
-    stock: 5,
+    stock: 0,
     category: "Accesorios",
-    urlImage: "",
+    urlImage: p04,
   },
 
   {
@@ -56,7 +68,7 @@ export const products = [
     price: 99700,
     stock: 10,
     category: "Accesorios",
-    urlImage: "",
+    urlImage: p05,
   },
 
   {
@@ -68,7 +80,7 @@ export const products = [
     price: 975900,
     stock: 1,
     category: "Impresoras",
-    urlImage: "",
+    urlImage: p06,
   },
 
   {
@@ -80,7 +92,7 @@ export const products = [
     price: 499000,
     stock: 14,
     category: "Impresoras",
-    urlImage: "",
+    urlImage: p07,
   },
 
   {
@@ -92,11 +104,11 @@ export const products = [
     price: 719800,
     stock: 20,
     category: "Impresoras",
-    urlImage: "",
+    urlImage: p08,
   },
 
   {
-    id: "p10",
+    id: "p09",
     marca: "LENOVO",
     name: "Tablet IdeaTab Pro 8GB",
     description:
@@ -104,11 +116,11 @@ export const products = [
     price: 849000,
     stock: 4,
     category: "Tablets",
-    urlImage: "",
+    urlImage: p09,
   },
 
   {
-    id: "p11",
+    id: "p10",
     marca: "CHUNGA",
     name: "Tablet Infantil Antigolpes con Diadema",
     description:
@@ -116,11 +128,11 @@ export const products = [
     price: 319900,
     stock: 4,
     category: "Tablets",
-    urlImage: "",
+    urlImage: p10,
   },
 
   {
-    id: "p12",
+    id: "p11",
     marca: "SAMSUNG",
     name: "Tablet Galaxy Tab A9 WiFi",
     description:
@@ -128,6 +140,6 @@ export const products = [
     price: 479900,
     stock: 0,
     category: "Tablets",
-    urlImage: "",
+    urlImage: p11,
   },
 ];
