@@ -33,6 +33,11 @@ function App() {
       }
     });
   };
+
+  const onRemoveProduct =(productId) => {
+    setCart((prevCart) => prevCart.filter((p) => p.id !== productId));
+  };
+
   return (
     <div>
       <Header
@@ -40,7 +45,11 @@ function App() {
         openDrawer={openDrawer}
       />
 
-      <DrawerCard isOpen={isDrawerOpen} closeDrawer={closeDrawer} cart={cart} />
+      <DrawerCard 
+      isOpen={isDrawerOpen} 
+      closeDrawer={closeDrawer} 
+      cart={cart}
+      onRemoveProduct={onRemoveProduct} />
 
       <ListProducts onAddProduct={onAddProduct} />
     </div>
