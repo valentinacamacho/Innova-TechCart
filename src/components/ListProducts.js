@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 import { products } from "../data/products";
 import "../styles/ListPro.css";
 
-function ListProducts({ onAddProduct }) {
+function ListProducts({ onAddProduct, products }) {
   return (
     <div className="products-list">
       {products.map((product) => (

@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import Header from "./Layout/Header";
 import ListProducts from "./components/ListProducts";
 import DrawerCard from "./components/DrawerCard";
+import { products as productsData } from "./data/products";
+
 
 function App() {
   const [cart, setCart] = useState([]);
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+const [products, setProducts] = useState(productsData);
+
 
   const openDrawer = () => setDrawerOpen(true);
   const closeDrawer = () => setDrawerOpen(false);
@@ -20,8 +24,11 @@ function App() {
   }, [cart]);
 
   const onAddProduct = (product) => {
+    if (product.stock <= 0) return;
+
     setCart((prevCart) => {
       const productExist = prevCart.find((p) => p.id === product.id);
+
       if (productExist) {
         return prevCart.map((p) =>
           p.id === product.id
@@ -32,6 +39,10 @@ function App() {
         return [...prevCart, { ...product, quantity: 1 }];
       }
     });
+
+    setProducts((prev) =>
+      prev.map((p) => (p.id === product.id ? { ...p, stock: p.stock - 1 } : p))
+    );
   };
 
   const onRemoveProduct = (productId) => {
@@ -57,6 +68,11 @@ function App() {
         .filter((item) => item.quantity > 0)
     );
   };
+
+  const totalAcum = cart.reduce((totalAcum, item) => {
+    return totalAcum + item.price * item.quantity;
+  }, 0);
+
   return (
     <div>
       <Header
@@ -73,7 +89,7 @@ function App() {
         decreQuantityPro={decreQuantityPro}
       />
 
-      <ListProducts onAddProduct={onAddProduct} />
+      <ListProducts products={products} onAddProduct={onAddProduct} />
     </div>
   );
 }
