@@ -36,7 +36,7 @@ function DrawerCard({
               <div>
                 <p className="font-semibold">{item.name}</p>
                 <p className="text-sm text-gray-500">{item.marca}</p>
-                <p className="text-sm">${item.price}</p>
+                <p className="text-sm">${item.price.toLocaleString("es-CO")}</p>
 
                 <div className="flex items-center gap-3 mt-2">
                   <button

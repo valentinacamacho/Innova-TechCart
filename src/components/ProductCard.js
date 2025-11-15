@@ -18,7 +18,7 @@ function ProductCard({ product, onAddProduct }) {
         {product.description && (
           <p className="product-description">{product.description}</p>
         )}
-        <p className="product-price">${product.price}</p>
+        <p className="product-price">${product.price.toLocaleString("es-CO")}</p>
 
         <p
           className={`product-stock ${
