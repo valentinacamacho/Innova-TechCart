@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# Proyecto: Carrito de Compras en React
+<a id="readme-top"></a> <details>
+  <summary>Tabla de contenido</summary>
+  <ol>
+    <li>
+      <a href="#acerca-del-proyecto">Acerca del Proyecto</a>
+      <ul>
+        <li><a href="#objetivo-del-proyecto">Objetivo del Proyecto</a></li>
+        <li><a href="#tecnologías-utilizadas">Tecnologías Utilizadas</a></li>
+         <li><a href="#requerimientos-funcionales">Requerimientos Funcionales</a></li>
+              <li><a href="#enlaces-del-proyecto">Enlaces del proyecto</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Objetivo
+Construir un flujo completo de **carrito de compras** usando el framework de **React** sin backend, simulando datos en formato **JSON** para consumir la información desde el frontend.  
 
-In the project directory, you can run:
+El proyecto se enfoca en conceptos de React como la utilización de **componentes, hooks, props, localStorage, manejo de eventos y animaciones**.
 
-### `npm start`
+<p style="text-align: right;">
+  <a href="#readme-top">volver arriba</a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
+### Tecnologías Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Framework
+![React-logo]<br>
+*Propósito:* Framework de JavaScript para construir interfaces de usuario dinámicas y reactivas. [React][React-url]
 
-### `npm test`
+![React-Router-logo]<br>
+*Propósito:* Librería para la gestión de rutas y navegación dentro de la aplicación React. [React Router DOM][React-Router-url]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Tailwind-logo]<br>
+*Propósito:* Framework de utilidades CSS para diseño rápido, responsivo y moderno. [Tailwind CSS][Tailwind-url]
 
-### `npm run build`
+![React-Icons-logo]<br>
+*Propósito:* Librería de iconos vectoriales para mejorar la interfaz de usuario. [React Icons][React-Icons-url]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![JSON-logo]<br>
+*Propósito:* Formato de intercambio de datos utilizado para simular la información del frontend.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p style="text-align: right;">
+  <a href="#readme-top">volver arriba</a>
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### Requerimientos Funcionales
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Listado de productos**  
+   - Mostrar datos simulados en JSON: imagen, título,marca, precio, badge de stock.  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Carrito flotante (drawer)**  
+   - Animación de entrada/salida.  
+   - Control desde el header (icono con contador de productos).  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Operaciones del carrito**  
+   - Agregar productos.  
+   - Eliminar productos.  
+   - Actualizar cantidad de productos, **prevenir cantidades mayores al stock**.  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Cálculos del carrito**  
+   - Subtotal.  
+   - Envío fijo e impuestos simulados.  
+   - Mostrar **TOTAL** de la compra.  
 
-## Learn More
+5. **Persistencia del carrito**  
+   - Usar **localStorage** para mantener el estado entre recargas.  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+6. **Estado vacío del carrito**  
+   - Mostrar mensaje y CTA **"El carrito está vacío"** cuando no hay productos.  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+7. **Diseño responsivo y accesibilidad básica**  
+   - Mobile-first.  
+   - Uso de semántica, foco visible, labels y atributos ARIA para accesibilidad.  
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p style="text-align: right;">
+  <a href="#readme-top">volver arriba</a>
+</p>
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Enlaces del Proyecto
+- Demo en Vercel: [Innova TechCart](https://innova-tech-cart.vercel.app/)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p style="text-align: right;">
+  <a href="#readme-top">volver arriba</a>
+</p>
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-### Deployment
+[React-logo]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+[React-Router-logo]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white  
+[React-Router-url]: https://reactrouter.com/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Tailwind-logo]: https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white  
+[Tailwind-url]: https://tailwindcss.com/
+
+[React-Icons-logo]: https://img.shields.io/badge/React_Icons-000000?style=for-the-badge&logo=react&logoColor=white  
+[React-Icons-url]: https://react-icons.github.io/react-icons/
+
+[JSON-logo]: https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white  
+[JSON-url]: https://www.json.org/json-en.html
+
