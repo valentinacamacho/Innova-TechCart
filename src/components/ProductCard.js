@@ -1,7 +1,7 @@
 import React from "react";
 import ProCard from "../styles/ProCard.css";
 
-function ProductCard({ product }) {
+function ProductCard({ product, onAddProduct }) {
   return (
     <div className="product-card">
       <div className="product-img">
@@ -27,7 +27,13 @@ function ProductCard({ product }) {
         >
           {product.stock > 0 ? `Stock: ${product.stock}` : "Sin stock"}
         </p>
-        <button disabled={product.stock === 0}>Añadir al carrito</button>
+        <button
+          onClick={() => onAddProduct(product)}
+          disabled={product.stock === 0}
+          className="bg-blue-500 text-white px-3 py-1 mt-2 rounded"
+        >
+          Añadir al carrito
+        </button>
       </div>
     </div>
   );

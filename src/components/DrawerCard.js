@@ -1,15 +1,17 @@
 import React from "react";
 
-function DrawerCard({ cart, isOpen, closeDrawer}) {
+function DrawerCard({ cart, isOpen, closeDrawer }) {
   return (
-<div
-  className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300
+    <div
+      className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300
     ${isOpen ? "translate-x-0" : "translate-x-full"}`}
->
-
+    >
       <div className="p-5 flex justufy-betwwen items-center border-b">
         <h2 className="text-2xl font-bold">Carrito</h2>
-        <button onClick={closeDrawer} className="text-red-500 font-bol  text-2xl">
+        <button
+          onClick={closeDrawer}
+          className="text-red-500 font-bol  text-2xl"
+        >
           x
         </button>
       </div>

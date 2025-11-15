@@ -22,7 +22,7 @@ function Header({ cartCount, openDrawer }) {
       </nav>
 
       <div className="relative cursor-pointer" onClick={openDrawer}>
-        <FaShoppingCart className="h-6 w-6"/>
+        <FaShoppingCart className="h-6 w-6" />
         {cartCount > 0 && (
           <span className="absolute -top2 -right-2 bg-red-500 text-xs w-5 rounded-full flex items-center justify-center">
             {cartCount}

@@ -7,8 +7,8 @@ function App() {
   const [cart, setCart] = useState([]);
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
-  const openDrawer =() => setDrawerOpen(true);
-  const closeDrawer =() => setDrawerOpen(false);
+  const openDrawer = () => setDrawerOpen(true);
+  const closeDrawer = () => setDrawerOpen(false);
 
   useEffect(() => {
     const storedCard = localStorage.getItem("cart");
@@ -36,13 +36,11 @@ function App() {
   return (
     <div>
       <Header
-       cardCount={cart.reduce((sum, p) => sum + p.quantity, 0)}
-      openDrawer = {openDrawer} />
+        cardCount={cart.reduce((sum, p) => sum + p.quantity, 0)}
+        openDrawer={openDrawer}
+      />
 
-      <DrawerCard 
-      isOpen={isDrawerOpen}
-      closeDrawer={closeDrawer}
-      cart={cart} />
+      <DrawerCard isOpen={isDrawerOpen} closeDrawer={closeDrawer} cart={cart} />
 
       <ListProducts onAddProduct={onAddProduct} />
     </div>
