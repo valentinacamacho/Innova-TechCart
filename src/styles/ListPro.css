@@ -4,18 +4,20 @@
   padding: 16px;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  max-width: 600px;
+  margin:0 auto;
 }
 @media (min-width: 640px) {
-  .products-list{
-    gap:20px;
-       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+  .products-list {
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }
-@media(min-width: 1024px){
-  .products-list{
+@media (min-width: 1024px) {
+  .products-list {
     max-width: 1200px;
     margin: 0 auto;
-    gap:24px;
+    gap: 24px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
