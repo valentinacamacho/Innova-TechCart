@@ -1,7 +1,14 @@
 import React from "react";
-import { TiDelete } from "react-icons/ti";
+import { MdDeleteForever, MdAdd, MdRemove } from "react-icons/md";
 
-function DrawerCard({ cart, isOpen, closeDrawer, onRemoveProduct }) {
+function DrawerCard({
+  cart,
+  isOpen,
+  closeDrawer,
+  onRemoveProduct,
+  decreQuantityPro,
+  increQuantityPro,
+}) {
   return (
     <div
       className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300
@@ -30,14 +37,32 @@ function DrawerCard({ cart, isOpen, closeDrawer, onRemoveProduct }) {
                 <p className="font-semibold">{item.name}</p>
                 <p className="text-sm text-gray-500">{item.marca}</p>
                 <p className="text-sm">${item.price}</p>
-                <p className="text-sm">Cantidad: {item.quantity}</p>
+
+                <div className="flex items-center gap-3 mt-2">
+                  <button
+                    onClick={() => decreQuantityPro(item.id)}
+                    className="p-1 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center"
+                  >
+                    <MdRemove size={20} />
+                  </button>
+                  <span className="font-semibild w-6 text-center">
+                    {item.quantity}
+                  </span>
+
+                  <button
+                    onClick={() => increQuantityPro(item.id)}
+                    className="p-1 bg-gray-200 hover:bg-gray-300 rounded-full flex items-center justify-center"
+                  >
+                    <MdAdd size={20} />
+                  </button>
+                </div>
               </div>
 
               <button
                 onClick={() => onRemoveProduct(item.id)}
                 className="ml-2 text-red-500 hover:text-red-700 relative group"
               >
-                <TiDelete
+                <MdDeleteForever
                   size={28}
                   className=" ml-3 mr-3 text-red-500 hover:text-red-700"
                 />

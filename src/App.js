@@ -34,10 +34,29 @@ function App() {
     });
   };
 
-  const onRemoveProduct =(productId) => {
+  const onRemoveProduct = (productId) => {
     setCart((prevCart) => prevCart.filter((p) => p.id !== productId));
   };
 
+  const increQuantityPro = (id) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id
+          ? { ...item, quantity: Math.min(item.quantity + 1, item.stock) }
+          : item
+      )
+    );
+  };
+
+  const decreQuantityPro = (id) => {
+    setCart((prevCart) =>
+      prevCart
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
   return (
     <div>
       <Header
@@ -45,11 +64,14 @@ function App() {
         openDrawer={openDrawer}
       />
 
-      <DrawerCard 
-      isOpen={isDrawerOpen} 
-      closeDrawer={closeDrawer} 
-      cart={cart}
-      onRemoveProduct={onRemoveProduct} />
+      <DrawerCard
+        isOpen={isDrawerOpen}
+        closeDrawer={closeDrawer}
+        cart={cart}
+        onRemoveProduct={onRemoveProduct}
+        increQuantityPro={increQuantityPro}
+        decreQuantityPro={decreQuantityPro}
+      />
 
       <ListProducts onAddProduct={onAddProduct} />
     </div>
