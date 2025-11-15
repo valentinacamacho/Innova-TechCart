@@ -1,0 +1,54 @@
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-brand {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.product-name {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.product-description {
+  font-size: 0.84rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.product-stock.Disponible {
+  color: green;
+}
+
+.product-stock.Agotado {
+  color: red;
+}
+
+.product-button{
+  padding:8px;
+  background-color: #1e40af;
+  color:white;
+  border:none;
+  cursor:pointer;
+  transition: background-color 0.3s;
+}
+
+.product-button:disabled{
+  background-color: #ccc;
+  cursor: not-allowed;
+}
